@@ -90,7 +90,9 @@ $(document).ready(function(){
 				          	// hide the loading gif and enable the button, reset the captcha
 				          	parent.find(".loading").toggle(200);
 				        	click.css("pointer-events","auto").prop("disabled",false);
-				        	grecaptcha.reset();
+				        	$('.g-recaptcha').each(function(index,element) {
+					          grecaptcha.reset(index);
+					        });
 
 
 			         	},2000)

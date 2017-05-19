@@ -16,11 +16,9 @@
   <?php if(in_array($view,["home","contact"])): ?>
     <script src='//www.google.com/recaptcha/api.js?onload=captchaCallBack&render=explicit' async defer></script>
     <script>
-      var recaptcha1;
-      var captchaCallBack = function() {
-        recaptcha1 = grecaptcha.render('recaptcha1', {
-          'sitekey' : '<?php $this->info("site_key");?>', 
-          'theme' : 'light'
+    var captchaCallBack = function() {
+        $('.g-recaptcha').each(function(index, el) {
+          grecaptcha.render(el, {'sitekey' : '<?php $this->info("site_key");?>'});
         });
       };
     </script>
