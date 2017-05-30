@@ -43,5 +43,3 @@
 
 	require MVC . 'controller/controller.php';
 	require MVC . 'app.php';
-
-
