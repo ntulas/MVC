@@ -3,32 +3,32 @@
 class GalleryModel
 {
 
-    public function getGalleryImages($dbSrc){
-      
-        $imgs= array();
-        $res = array();
-        $file = fopen("csvDB/".$dbSrc.'.csv', "r") or die("Cannot open");
+	public function getGalleryImages($dbSrc){
 
-        $templateArr =(fgetcsv($file));
+		$imgs= array();
+		$res = array();
+		$file = fopen("csvDB/".$dbSrc.'.csv', "r") or die("Cannot open");
 
-        $index=0;
-        while(!feof($file)){
-            $storageArray = array();
-            $elems = fgetcsv($file);
-            for ($i = 0; $i <= count($templateArr)-1; $i++){
-                $storageArray[$templateArr[$i]] = $elems[$i];
-            }
-            $res[$index++] = $storageArray;
-        }
+		$templateArr =(fgetcsv($file));
 
-        fclose($file);
+		$index=0;
+		while(!feof($file)){
+			$storageArray = array();
+			$elems = fgetcsv($file);
+			for ($i = 0; $i <= count($templateArr)-1; $i++){
+				$storageArray[$templateArr[$i]] = $elems[$i];
+			}
+			$res[$index++] = $storageArray;
+		}
 
-        foreach($res as $value)
-        {   
-            $imgs[] = array("rel"=>$value["rel"],"src"=>$value["src"],"alt"=>$value["alt"]);
-        }
+		fclose($file);
 
-         return $imgs;
-    }
+		foreach($res as $value)
+		{
+			$imgs[] = array("rel"=>$value["rel"],"src"=>$value["src"],"alt"=>$value["alt"]);
+		}
+
+		return $imgs;
+	}
 
 }

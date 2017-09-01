@@ -1,3 +1,3 @@
 <?php
 	require "config/config.php";
-	$app = new App();
+	$app = new App($siteInfo);
