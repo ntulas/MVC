@@ -40,9 +40,16 @@
 
     }
 
-    public function checkSuspension(){
+    public function checkSuspensionHeader(){
+        if($this->siteInfo["suspended"]){
+            echo '<div class="suspension-contain">';
+        }
+    }
+
+    public function checkSuspensionFooter(){
         if($this->siteInfo["suspended"]){
             require MVC . 'view/template/suspension.php';
+            echo "</div>";
         }
     }
 

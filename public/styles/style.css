@@ -1,5 +1,5 @@
-html.suspended {background: rgba(0,0,0,0.6)}
-html.suspended body {position: relative;}
+.suspension-contain {max-height: 980px;overflow:hidden;position: relative;}
+html.suspended {background: rgba(0,0,0,0.6);}
 body {max-width: 1440px;min-width: 1200px;margin: 0 auto;text-align: center;font-family: Arial}
 a {color:inherit;text-decoration: none}
 a:hover {text-decoration: none;color:inherit;}

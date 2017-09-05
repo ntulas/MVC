@@ -40,6 +40,6 @@
    </script>
   <?php endif; ?>
 
-  <?php $this->checkSuspension(); ?>
+  <?php $this->checkSuspensionFooter(); ?>
 </body>
 </html>

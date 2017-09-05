@@ -16,6 +16,7 @@
     <?php $this->helpers->analytics(); ?>
 </head>
 <body <?php $this->helpers->bodyClasses($view);?>>
+<?php $this->checkSuspensionHeader(); ?>
 <header>
 	<div id="header">
 		<div class="row">
