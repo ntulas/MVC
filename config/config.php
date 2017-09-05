@@ -26,7 +26,10 @@
 		"yp_link" =>"https://yelp.com",
 
 		//seo
-		"ga_tracking_id" => ''
+		"ga_tracking_id" => '',
+
+		//suspension
+		"suspended" => false
 		];
 
 		
