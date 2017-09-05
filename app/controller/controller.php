@@ -40,12 +40,6 @@
 
     }
 
-    public function checkSuspension(){
-        if($this->siteInfo["suspended"]){
-            require MVC . 'view/template/suspension.php';
-        }
-    }
-
     public function sendContactForm(){
 
         /** Available args:
