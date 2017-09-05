@@ -37,41 +37,41 @@ $(document).ready(function(){
 					resetCss();
 
 					$.ajax({
-					type: "POST",
-					data:parent.serialize(),
-					url: target,
-					beforeSend:function(){
+			        type: "POST",
+			        data:parent.serialize(),
+			        url: target,
+			        beforeSend:function(){
 
-						// display loading gif and disable button
-						parent.find(".loading").toggle(200);
-						click.css("pointer-events","none").prop("disabled",true);
-					},
-					success: function(data){
-						// disable the button for 2 seconds no matter the result
-						setTimeout(function(){
+			        	// display loading gif and disable button
+			        	parent.find(".loading").toggle(200);
+			        	click.css("pointer-events","none").prop("disabled",true);
+			        },
+			        success: function(data){
+				        // disable the button for 2 seconds no matter the result
+				        setTimeout(function(){
 
-							if(data == "sent"){
-								// slide down success message, hide it after 3 seconds, and clear the field forms
-								parent.find(".success").slideDown(300);
-								parent.find(":input").val('');
-								setTimeout(sldUp,5000);
-							}
-						  else{
-							var msg = "";
-							switch(data){
-								// customize the messages here
-								case 'not-sent':
-									msg = "Mailer error. Please try again.";
-								break;
-								case 'no-recaptcha':
-									msg ="Please click on the reCaptcha.";
-								break;
-								case 'wrong-recaptcha':
-									msg = "You have failed the reCaptcha test. Please try again." ;
-								break;
-								default:
-									// by default parses the messages, but it's possible to customize the message if there are ANY errors,
-									// just replace the msg variable below and remove it from the loop. Like the commented sample below
+				        	if(data == "sent"){
+					        	// slide down success message, hide it after 3 seconds, and clear the field forms
+					            parent.find(".success").slideDown(300);
+					          	parent.find(":input").val('');
+					          	setTimeout(sldUp,5000);
+				          	}
+				          else{
+				          	var msg = "";
+				          	switch(data){
+				          		// customize the messages here
+				          		case 'not-sent':
+				          			msg = "Mailer error. Please try again.";
+				          		break;
+				          		case 'no-recaptcha':
+				          			msg ="Please click on the reCaptcha.";
+				          		break;
+				          		case 'wrong-recaptcha':
+				          			msg = "You have failed the reCaptcha test. Please try again." ;
+				          		break;
+				          		default:
+				          			// by default parses the messages, but it's possible to customize the message if there are ANY errors,
+				          			// just replace the msg variable below and remove it from the loop. Like the commented sample below
 									var errors = JSON.parse(data);
 									$.each(errors,function(e){
 
@@ -85,30 +85,30 @@ $(document).ready(function(){
 								// display the error message
 								parent.find(".failed").html(msg).slideDown(300);
 								
-						  }
+				          }
 
-							// hide the loading gif and enable the button, reset the captcha
-							parent.find(".loading").toggle(200);
-							click.css("pointer-events","auto").prop("disabled",false);
-							$('.g-recaptcha').each(function(index,element) {
-							  grecaptcha.reset(index);
-							});
+				          	// hide the loading gif and enable the button, reset the captcha
+				          	parent.find(".loading").toggle(200);
+				        	click.css("pointer-events","auto").prop("disabled",false);
+				        	$('.g-recaptcha').each(function(index,element) {
+					          grecaptcha.reset(index);
+					        });
 
 
-						},2000)
-					},
-					error: function(data){
-					   parent.find(".failed").slideDown(300);
+			         	},2000)
+			        },
+			        error: function(data){
+			           parent.find(".failed").slideDown(300);
 
-					},
-				});
+			        },
+			    });
 			});
 	});
 });
  
 
-	
+    
 
-				  
+                  
 
-			  
+              
