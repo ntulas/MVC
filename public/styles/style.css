@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 .suspension-contain {max-height: 980px;overflow:hidden;position: relative;}
 html.suspended {background: rgba(0,0,0,0.6);}
+=======
+>>>>>>> 51faeab35ca95ac0074bbf01b4384a7ea4998f8a
 body {max-width: 1440px;min-width: 1200px;margin: 0 auto;text-align: center;font-family: Arial}
 a {color:inherit;text-decoration: none}
 a:hover {text-decoration: none;color:inherit;}
@@ -27,7 +30,7 @@ form [type="submit"] {margin:20px auto}
 .ctc-form {margin: 0 auto;text-align: center;}
 .ctc-form input[type="text"],.ctc-form textarea {font-family:Arial;font-size: 16px;color:#000;height:45px;display: block;width: 100%;border:1px solid #ddd;border-radius: 3px;padding: 5px 10px;box-sizing: border-box;margin: 0 auto 8px}
 .ctc-form textarea {height: 120px;padding-top:10px;}
-.g-recaptcha > div {margin: 0 auto;}
+.ctc-form .recap {display: inline-block;}
 
 /*gallery*/
 #content .gallery-container {text-align: center;}

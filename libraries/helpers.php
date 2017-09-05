@@ -204,6 +204,7 @@ public function bodyClasses($view){
         echo 'class="home"';
     }
 }
+<<<<<<< HEAD
 
 public function htmlClasses(){
 		$htmlClass = 'class="';
@@ -217,4 +218,6 @@ public function suspensionRedirect($view){
 			header("Location:".URL);
 	  }	
 	}
+=======
+>>>>>>> 51faeab35ca95ac0074bbf01b4384a7ea4998f8a
 }

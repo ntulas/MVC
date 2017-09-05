@@ -39,7 +39,10 @@
      });
    </script>
   <?php endif; ?>
+<<<<<<< HEAD
 
   <?php $this->checkSuspensionFooter(); ?>
+=======
+>>>>>>> 51faeab35ca95ac0074bbf01b4384a7ea4998f8a
 </body>
 </html>

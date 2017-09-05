@@ -1,6 +1,5 @@
-<?php $this->helpers->suspensionRedirect($view); ?>
 <!DOCTYPE html>
-<html lang="en" <?php $this->helpers->htmlClasses(); ?>>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>

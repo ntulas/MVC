@@ -40,6 +40,7 @@
 
     }
 
+<<<<<<< HEAD
     public function checkSuspensionHeader(){
         if($this->siteInfo["suspended"]){
             echo '<div class="suspension-contain">';
@@ -53,6 +54,8 @@
         }
     }
 
+=======
+>>>>>>> 51faeab35ca95ac0074bbf01b4384a7ea4998f8a
     public function sendContactForm(){
 
         /** Available args:
